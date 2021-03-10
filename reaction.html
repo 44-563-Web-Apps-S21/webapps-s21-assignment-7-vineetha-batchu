@@ -10,14 +10,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+  <div class="container">
   <h2>Vineetha Batchu reaction timer</h2>
   <p id="target">Your time</p>
 
   <p id="countdown">Count</p>
-  <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
-  <button type="button" class="btn btn-primary" onclick="recordReact()">React Now</button>
-
+  <button type="button" class="btn btn-secondary" onclick="startTime()">Start Timer</button>
+  <button type="button" class="btn btn-dark" onclick="recordReact()">React Now</button>
+</div>
   
   <script> 
     myTime = undefined;
@@ -25,11 +25,16 @@
         myTime = Date.now();
         console.log("Time : " + myTime);
       }
+     function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); 
+      }   
   
      
   
       function startTime() {
-        var countdown = getRandomIntInclusive(2, 10);
+        var countdown =getRandomIntInclusive(2, 10);
         console.log(countdown);
         
         for (var i = 0; i < 3; i++) {
