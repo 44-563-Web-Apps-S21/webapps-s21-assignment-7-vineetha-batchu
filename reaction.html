@@ -29,14 +29,14 @@
      
   
       function startTime() {
-        
+        var countdown = getRandomIntInclusive(2, 10);
         console.log(countdown);
-  
+        
         for (var i = 0; i < 3; i++) {
   
           setTimeout(function (i) {
             document.getElementById("countdown").innerHTML = i
-          }, (((3) - i) * 1000), i);
+          }, (((countdown) - i) * 1000), i);
   
         }
   
@@ -54,7 +54,7 @@
             document.getElementById("react").classList.add("btn-primary");
             document.getElementById("react").classList.remove("btn-success");
           }
-        }, (3)*1000)
+        }, (countdown)*1000)
       }
     </script>
 </body>

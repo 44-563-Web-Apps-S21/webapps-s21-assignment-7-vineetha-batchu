@@ -83,7 +83,16 @@
       var ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
                 "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
      var clickCount = 0;
-     var treasureLocation = 18;
+     var treasureLocation = Math.floor((Math.random() * 24) + 0);
+     function newGame() {
+            var clickCount = 0;
+            var treasureLocation = getRandomIntInclusive(0, 24);
+            console.log(treasureLocation);
+            document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
+
+            document.getElementById("distance").innerHTML = "Distance is unknown.";
+        }
+
       function makeGuess(position){
 
             var id;

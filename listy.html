@@ -48,7 +48,7 @@
         element.innerHTML = document.getElementById("text").value;
         element.setAttribute('class', 'listy');
         element.style.color = "orange"
-
+        var i;
         var listyItems = document.getElementsByClassName("listy");
         len = listyItems.length;
         var r = 0;
@@ -62,7 +62,8 @@
                 }
             }
             if (r == 0) {
-                listyItems[0].remove();
+                i = Math.floor((Math.random() * 9) + 0);
+                listyItems[i].remove();
             }
         }
         document.getElementById('target').appendChild(element)
